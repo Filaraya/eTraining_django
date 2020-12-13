@@ -1,0 +1,37 @@
+{% extends "blog/base.html" %}
+{% block page_header %}
+<div class="jumbotron">
+    <h3 class="display-3">Attend your Training.</h3>
+    <p class="lead"> By login your creditial start your training of our company. The training focus on the Modules
+        learning such Saftey, Laws and Rules of our company.</p>
+</div>
+{% endblock page_header %}
+{% block content %}
+<h2>Instructors</h2>
+{% for instructor in object_list %}
+<div class=" card mb-3">
+    <div class="card-header"> 
+        
+        <a href="{% url 'blog:instructor-detail' instructor.pk %}">
+            {{ instructor }}
+        </a>
+        
+    </div>
+    
+    <div class="card-body">
+        
+            <p>Email: {{ instructor.email }}</p>
+        
+    </div>
+    
+</div>
+
+
+
+{% if object_list %}
+
+{% else %}
+<p>There are no instructor available.</p>
+{% endif %}
+{% endfor %}
+{% endblock %}

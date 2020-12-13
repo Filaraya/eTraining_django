@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% block page_header %}
+<div class ="jumbotron">
+    <h3 class = "display-3">Attend your Training.</h3>
+    <p class ="lead"> By login your creditial start your training of our company. The training focus on the Modules learning such Saftey, Laws and Rules of our company.</p>
+</div>
+{% endblock page_header %}
+{% block content %}
+<p>Logged out!</p>
+<a href="{% url 'login' %}">Click here to login again.</a>
+{% endblock %}

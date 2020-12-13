@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+{% block page_header %}
+<div class ="jumbotron">
+  <h3 class = "display-3">Attend your Training.</h3>
+  <p class ="lead"> By login your creditial start your training of our company. The training focus on the Modules learning such Saftey, Laws and Rules of our company.</p>
+</div>
+{% endblock page_header %}
+{% block content %}
+<h1>eTraining Home</h1>
+
+<p>Welcome to <em>eTraining</em>, </p>
+<p>eTraining is a great idea in solving the eTraining problem.</p>
+<p>eTraining creates a chance for the learning modules and materials on the eTraining web application.</p>
+
+<h2>Content</h2>
+<p>Currently, eTraining has the following contents. </p>
+
+<ul>
+  <li><strong>Modules:</strong> {{ num_modules }}</li>
+  <li><strong>Instructors:</strong> {{ num_instructors }}</li>
+</ul>
+<p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+
+{% endblock content %}

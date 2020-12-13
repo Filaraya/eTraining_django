@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+{% block page_header %}
+<div class ="jumbotron">
+    <h3 class = "display-3">Attend your Training.</h3>
+    <p class ="lead"> By login your creditial start your training of our company. The training focus on the Modules learning such Saftey, Laws and Rules of our company.</p>
+</div>
+{% endblock page_header %}
+{% block content %}
+<h1>Instructors detail</h1>
+<div class=" card mb-3">
+    <div class="card-header">
+        {{ instructor.first_name }} {{instructor.last_name}}</a>
+    </div>
+    <div class="card-body">
+        <p>Contact Email: {{instructor.email}} </p>
+        
+    </div>
+</div>
+
+
+{% endblock content %}

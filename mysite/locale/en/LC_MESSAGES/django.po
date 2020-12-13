@@ -1,0 +1,5 @@
+msgid "Please correct the errors below."
+msgid "Please correct the errors below."
+msgstr "Fix the errors now!"
+django-admin compilemessages
+processing file django.po in /path/to/project/locale/en/LC_MESSAGES

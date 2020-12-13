@@ -1,0 +1,53 @@
+{% extends "blog/base.html" %}
+{% load bootstrap4 %}
+{% block page_header %}
+<div class ="jumbotron">
+    <h3 class = "display-3">Attend your Training.</h3>
+    <p class ="lead"> By login your creditial start your training of our company. The training focus on the Modules learning such Saftey, Laws and Rules of our company.</p>
+</div>
+{% endblock page_header %}
+{% block content %}
+<div class = "hero-unit">
+    <h2> Login to eTraining</h2>
+
+<div class="container">
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+{% if user.is_authenticated %}
+<p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+{% else %}
+<h3 class = "form=signin-heading">Please sign in</h3>
+{% endif %}
+{% endif %}
+
+<form method ="post" action="{% url 'login' %}">
+    
+
+    <div>
+        {% csrf_token %}
+    <table>
+        <tr>
+            <td><b>{{ form.username.label_tag }}</b></td>
+            <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+            <td><b>{{ form.password.label_tag }}</b></td>
+            <td>{{ form.password }}</td>
+        </tr>
+    </table>
+    <input class="btn btn-primary pull-right" type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+
+    </div>
+    
+</form>
+
+{# Assumes you setup the password_reset view in your URLconf #}
+<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+</div>
+</div>
+{% endblock %}

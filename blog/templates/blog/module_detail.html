@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+{% block page_header %}
+<div class ="jumbotron">
+    <h3 class = "display-3">Attend your Training.</h3>
+    <p class ="lead"> By login your creditial start your training of our company. The training focus on the Modules learning such Saftey, Laws and Rules of our company.</p>
+</div>
+{% endblock page_header %}
+{% block content %}
+<h1>Modules detail</h1>
+<div class=" card mb-3">
+    <div class="card-header">
+        <a href="">{{ module.title }}</a>
+    </div>
+    <div class="card-body">
+        <p>Instructor: <a href="{% url 'blog:instructor-detail' module.instructor.pk %}">{{module.instructor}}</a> </p>
+        <p>Summary: {{module.summary}}</p>
+        <p><strong>CODE:</strong> {{ module.code }}</p>
+    </div>
+</div>
+
+
+{% endblock content %}
+
