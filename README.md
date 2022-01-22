@@ -52,6 +52,3 @@ You might want to consider using something like the [All Contributors](https://g
 
 If you want to contact me you can reach me at <faraya1@live.maryville.edu>.
 
-## License
-
-This project uses the following license: [<license_name>](<link>).
